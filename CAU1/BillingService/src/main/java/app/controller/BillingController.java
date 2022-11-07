@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import app.dto.BillingDto;
 import app.entity.Billing;
 import app.service.BillingService;
 
@@ -25,7 +26,7 @@ public class BillingController {
 	
 	int count = 1;
 	@GetMapping("billings/{id}")
-	public Billing findById(@PathVariable String id) {
+	public BillingDto findById(@PathVariable String id) {
 
 					
 		return service.findById(id);

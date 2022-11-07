@@ -1,0 +1,19 @@
+resilience4j.retry:
+    instances:
+        passenger:
+            registerHealthIndicator: true
+            maxAttempts: 10
+            waitDuration: 10s
+
+
+
+
+management:
+  endpoint:
+    health:
+      show-details: always         #To show all details in /health endpoint.
+
+management.health.circuitbreakers.enabled: true
+
+
+
